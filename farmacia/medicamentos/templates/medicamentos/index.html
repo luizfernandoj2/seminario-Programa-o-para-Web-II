@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Farmácia</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'medicamentos/style.css' %}">
+</head>
+<body>
+    <h1>Sistema de Farmácia</h1>
+
+    <h2>Adicionar Medicamento</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="lote">Lote:</label>
+        <input type="text" id="lote" name="lote" required><br>
+
+        <label for="validade">Validade:</label>
+        <input type="date" id="validade" name="validade" required><br>
+
+        <label for="preco">Preço:</label>
+        <input type="number" id="preco" name="preco" required><br>
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" required><br>
+
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Lista de Medicamentos</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Lote</th>
+                <th>Validade</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medicamento in medicamentos %}
+            <tr>
+                <td>{{ medicamento.nome }}</td>
+                <td>{{ medicamento.lote }}</td>
+                <td>{{ medicamento.validade }}</td>
+                <td>{{ medicamento.preco }}</td>
+                <td>{{ medicamento.quantidade }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+<nav>
+    <a href="/">Home</a> |
+    <a href="/medicamentos/">Medicamentos</a> |
+    <a href="/clientes/">Clientes</a> |
+    <a href="/vendas/">Vendas</a>
+</nav>
+</html>

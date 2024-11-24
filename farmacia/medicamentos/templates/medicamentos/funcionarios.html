@@ -1,0 +1,47 @@
+{% extends 'medicamentos/base.html' %}
+<!-- Herda o template base definido em 'medicamentos/base.html' -->
+<!-- O template base contém cabeçalho, rodapé e estrutura principal -->
+
+{% block title %}Lista de Funcionários{% endblock %}
+<!-- Define o título da página como "Lista de Funcionários", substituindo o título padrão do template base -->
+
+{% block content %}
+<!-- Início do bloco de conteúdo específico da página -->
+
+<section class="intro">
+    <!-- Introdução da página -->
+    <h2>Lista de Funcionários</h2> <!-- Título da seção -->
+
+    <table class="table">
+        <!-- Tabela para exibir a lista de funcionários -->
+        <thead>
+            <!-- Cabeçalho da tabela -->
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Salário</th>
+                <th>Data de Contratação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Corpo da tabela -->
+            {% for funcionario in funcionarios %}
+            <!-- Loop para iterar sobre todos os funcionários fornecidos pelo contexto -->
+            <tr>
+                <td>{{ funcionario.nome }}</td> <!-- Nome do funcionário -->
+                <td>{{ funcionario.cargo }}</td> <!-- Cargo do funcionário -->
+                <td>R$ {{ funcionario.salario|floatformat:2 }}</td> 
+                <!-- Salário formatado com 2 casas decimais -->
+                <td>{{ funcionario.data_contratacao|date:"d/m/Y" }}</td> 
+                <!-- Data de contratação formatada no padrão dia/mês/ano -->
+            </tr>
+            {% endfor %}
+            <!-- Fim do loop -->
+        </tbody>
+    </table>
+    <a href="/" class="nav-link">Voltar para Home</a>
+    <!-- Botão/link para retornar à página inicial -->
+</section>
+
+{% endblock %}
+<!-- Fim do bloco de conteúdo específico -->

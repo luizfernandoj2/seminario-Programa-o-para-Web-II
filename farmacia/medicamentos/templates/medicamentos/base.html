@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a página para dispositivos móveis -->
+    <title>{% block title %}Sistema de Farmácia{% endblock %}</title> <!-- Permite que o título seja definido em páginas específicas -->
+    {% load static %} <!-- Carrega os arquivos estáticos configurados no Django -->
+    <link rel="stylesheet" href="{% static 'medicamentos/style.css' %}"> <!-- Link para o arquivo CSS para estilização -->
+</head>
+<body>
+    <!-- Cabeçalho do sistema -->
+    <header class="header">
+        <h1>Sistema de Farmácia</h1> <!-- Título principal da aplicação -->
+    </header>
+    
+    <!-- Área principal da página -->
+    <main class="main">
+        {% block content %} <!-- Bloco de conteúdo dinâmico que será preenchido em cada página específica -->
+        {% endblock %}
+    </main>
+    
+    <!-- Rodapé do sistema -->
+    <footer class="footer">
+        <p>Desenvolvido para o Sistema de Farmácia &copy; 2024</p> <!-- Texto informativo do rodapé -->
+    </footer>
+</body>
+</html>

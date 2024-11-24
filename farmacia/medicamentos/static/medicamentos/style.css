@@ -1,0 +1,112 @@
+/* Centralizar a seção inteira com estilos suaves */
+.intro {
+    text-align: center; /* Centraliza o texto na seção */
+    padding: 20px; /* Espaçamento interno em volta do conteúdo */
+    background-color: #E5E5E5; /* Cor de fundo cinza claro */
+    margin: 20px auto; /* Espaçamento externo e centralização horizontal */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 90%; /* Largura relativa ao contêiner pai */
+    max-width: 800px; /* Largura máxima da seção */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
+}
+
+/* Estilizar e centralizar a tabela */
+.table {
+    width: 100%; /* Faz a tabela ocupar toda a largura do contêiner pai */
+    margin: 20px auto; /* Espaçamento externo e centralização horizontal */
+    border-collapse: collapse; /* Remove espaços entre bordas das células */
+    background: #fff; /* Cor de fundo branca */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar a tabela */
+}
+
+/* Estilo das células da tabela (cabeçalho e corpo) */
+.table th, .table td {
+    padding: 10px; /* Espaçamento interno nas células */
+    text-align: center; /* Centraliza o conteúdo dentro das células */
+    border: 1px solid #ddd; /* Borda cinza clara */
+}
+
+/* Estilo exclusivo para cabeçalhos da tabela */
+.table th {
+    background: #3DB2FF; /* Fundo azul claro */
+    color: #fff; /* Texto branco */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Adicionar cor de fundo alternada para linhas pares */
+.table tr:nth-child(even) {
+    background: #f9f9f9; /* Fundo cinza claro */
+}
+
+/* Adicionar efeito de hover nas linhas da tabela */
+.table tr:hover {
+    background: #3EF37E; /* Fundo verde limão */
+    color: #000; /* Texto preto */
+}
+
+/* Estilização para botões de navegação */
+.nav-link {
+    display: inline-block; /* Exibe como um bloco alinhado no centro */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Texto em negrito */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    color: #fff; /* Texto branco */
+    background-color: #3DB2FF; /* Fundo azul claro */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 20px auto; /* Espaçamento externo e centralização */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+
+/* Alterações no estilo do botão ao passar o mouse */
+.nav-link:hover {
+    background-color: #3EF37E; /* Fundo verde limão */
+    color: #000; /* Texto preto */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+}
+
+/* Estilização do rodapé */
+.footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #2A2E45; /* Cor de fundo azul escuro */
+    color: #fff; /* Texto branco */
+    position: relative; /* Posicionamento relativo ao conteúdo */
+    bottom: 0; /* Fixa o rodapé na parte inferior */
+    width: 100%; /* Faz o rodapé ocupar toda a largura */
+}
+
+/* Contêiner para organizar formulários */
+.forms-container {
+    display: flex; /* Exibe os formulários em um layout flexível */
+    flex-wrap: wrap; /* Permite que os formulários "quebrem" linha se necessário */
+    justify-content: space-around; /* Espaça os formulários uniformemente */
+    gap: 20px; /* Espaçamento entre os formulários */
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona espaçamento externo */
+    max-width: 1200px; /* Define a largura máxima do contêiner */
+}
+
+/* Estilo individual para cada formulário */
+.form-section {
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    width: 100%; /* O formulário ocupa toda a largura disponível */
+    max-width: 400px; /* Define a largura máxima */
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #3DB2FF; /* Fundo azul claro */
+    color: #fff; /* Texto branco */
+    font-weight: bold; /* Texto em negrito */
+    border: none; /* Remove bordas */
+    cursor: pointer; /* Mostra o cursor "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave ao interagir */
+}
+
+/* Estilo dos botões ao passar o mouse */
+button:hover {
+    background-color: #3EF37E; /* Fundo verde limão */
+    color: #000; /* Texto preto */
+}

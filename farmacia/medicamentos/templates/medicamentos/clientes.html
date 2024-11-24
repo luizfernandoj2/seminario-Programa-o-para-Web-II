@@ -1,0 +1,42 @@
+{% extends 'medicamentos/base.html' %}
+<!-- Herda o template base definido em 'medicamentos/base.html', incluindo cabeçalho, rodapé e estrutura geral -->
+
+{% block title %}Lista de Clientes{% endblock %}
+<!-- Define o título da página como "Lista de Clientes", substituindo o título padrão do template base -->
+
+{% block content %}
+<!-- Início do bloco de conteúdo específico da página -->
+
+<section class="intro">
+    <!-- Introdução da página -->
+    <h2>Lista de Clientes</h2> <!-- Título da seção -->
+
+    <table class="table">
+        <!-- Tabela para exibir a lista de clientes -->
+        <thead>
+            <!-- Cabeçalho da tabela -->
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Corpo da tabela -->
+            {% for cliente in clientes %}
+            <!-- Loop para iterar sobre todos os clientes fornecidos pelo contexto -->
+            <tr>
+                <td>{{ cliente.nome }}</td> <!-- Nome do cliente -->
+                <td>{{ cliente.cpf }}</td> <!-- CPF do cliente -->
+                <td>{{ cliente.telefone }}</td> <!-- Telefone do cliente -->
+            </tr>
+            {% endfor %}
+            <!-- Fim do loop -->
+        </tbody>
+    </table>
+    <a href="/" class="nav-link">Voltar para a Home</a>
+    <!-- Botão/link para retornar à página inicial -->
+</section>
+
+{% endblock %}
+<!-- Fim do bloco de conteúdo específico -->

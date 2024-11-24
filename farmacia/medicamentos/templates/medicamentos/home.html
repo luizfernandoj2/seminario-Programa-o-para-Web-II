@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a página para dispositivos móveis -->
+    <title>Sistema de Farmácia</title> <!-- Define o título da página -->
+    {% load static %} <!-- Carrega os arquivos estáticos configurados no Django -->
+    <link rel="stylesheet" href="{% static 'medicamentos/style.css' %}"> <!-- Importa o arquivo de estilos CSS -->
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <h1>Sistema de Farmácia</h1> <!-- Título principal exibido no topo da página -->
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="main">
+        <!-- Introdução da página -->
+        <section class="intro">
+            <p>Bem-vindo ao Sistema de Farmácia. Escolha uma das opções abaixo para gerenciar os recursos:</p>
+        </section>
+        
+        <!-- Navegação principal -->
+        <nav class="navigation">
+            <ul class="nav-list">
+                <!-- Lista de links de navegação para diferentes seções do sistema -->
+                <li><a class="nav-link" href="/medicamentos/">Gerenciar Medicamentos</a></li>
+                <li><a class="nav-link" href="/clientes/">Gerenciar Clientes</a></li>
+                <li><a class="nav-link" href="/vendas/">Gerenciar Vendas</a></li>
+                <li><a class="nav-link" href="/funcionarios/">Gerenciar Funcionários</a></li>
+                <li><a class="nav-link" href="/cadastro/">Área de Cadastro</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <p>Desenvolvido para o Sistema de Farmácia &copy; 2024</p> <!-- Informação sobre o desenvolvedor -->
+    </footer>
+</body>
+</html>
